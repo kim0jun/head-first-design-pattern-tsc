@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",                          
+    "module": "commonjs",                     
+    "strict": true,
+    "outDir": "dist/",                       /* Redirect output structure to the directory. */
+    "rootDir": "src/",                                     
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+      ".vscode",
+      ".git",
+      "node_modules",
+  ]
+}
