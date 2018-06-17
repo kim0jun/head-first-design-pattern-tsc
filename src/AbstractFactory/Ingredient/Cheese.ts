@@ -1,2 +1,2 @@
-export class Cheese{}
-export class ReggianoCheese extends Cheese{}
+export interface Cheese{}
+export class ReggianoCheese implements Cheese{}

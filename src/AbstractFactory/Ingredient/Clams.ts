@@ -1,2 +1,2 @@
-export class Clams{}
-export class FreshClams extends Clams{}
+export interface Clams{}
+export class FreshClams implements Clams{}

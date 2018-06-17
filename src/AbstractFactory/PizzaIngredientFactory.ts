@@ -22,3 +22,12 @@ export class NYPizzaIngredientFactory implements PizzaIngredientFactory{
     public createPepperoni = () => new SlicedPepperoni();
     public createClams = () => new FreshClams();
 }
+
+export class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory{
+    public createDough = () => new ThinCrushtDough();
+    public createSauce = () => new MarinaraSauce();
+    public createCheese = () => new ReggianoCheese();
+    public createVeggies = () => [new Garlic(), new Onion(), new Mushroom(), new RedPepper()];
+    public createPepperoni = () => new SlicedPepperoni();
+    public createClams = () => new FreshClams();
+}

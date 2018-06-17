@@ -1,5 +1,5 @@
-export class Veggies{}
-export class Garlic extends Veggies{}
-export class Onion extends Veggies{}
-export class Mushroom extends Veggies{}
-export class RedPepper extends Veggies{}
+export interface Veggies{}
+export class Garlic implements Veggies{}
+export class Onion implements Veggies{}
+export class Mushroom implements Veggies{}
+export class RedPepper implements Veggies{}

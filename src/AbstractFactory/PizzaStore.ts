@@ -1,6 +1,6 @@
 import PIZZA_TYPE from "./PizzaType";
 import { Pizza, CheesePizza, PepperoniPizza, ClamsPizza, VeggiePizza} from "./Pizza";
-import { PizzaIngredientFactory, NYPizzaIngredientFactory } from "./PizzaIngredientFactory";
+import { PizzaIngredientFactory, NYPizzaIngredientFactory, ChicagoPizzaIngredientFactory } from "./PizzaIngredientFactory";
 import { Pepperoni } from "./Ingredient/Pepperoni";
 
 export abstract class PizzaStore{
@@ -45,4 +45,35 @@ export class NYPizzaStore extends PizzaStore{
         }
     };
 }
+
+export class ChicagoPizzaStore extends PizzaStore{
+    createPizza(type: PIZZA_TYPE): Pizza {
+        const pizzaIngrientFactory: PizzaIngredientFactory = new  ChicagoPizzaIngredientFactory();
+        let pizza: Pizza;
+        
+        switch(type){
+        case PIZZA_TYPE.CHEESE:
+            pizza = new CheesePizza(pizzaIngrientFactory);
+            pizza.setName('Chicago Style Deep Dish and Cheese Pizza');
+            return pizza;
+        case PIZZA_TYPE.PEPPERONI:
+            pizza = new PepperoniPizza(pizzaIngrientFactory);
+            pizza.setName('Chicago Style Deep Dish and Pepperoni Pizza');
+            return pizza;
+        case PIZZA_TYPE.CLAM:
+            pizza = new ClamsPizza(pizzaIngrientFactory);
+            pizza.setName('Chicago Style Deep Dish and Clam Pizza');
+            return pizza;
+        case PIZZA_TYPE.VEGGIE:
+            pizza = new VeggiePizza(pizzaIngrientFactory);
+            pizza.setName('Chicago Style Deep Dish and Veggie Pizza');
+            return pizza;
+        default:
+            pizza = new CheesePizza(pizzaIngrientFactory);
+            pizza.setName('default is Chicago Style Deep Dish and Cheese Pizza');
+            return pizza;
+        }
+    };
+}
+
 

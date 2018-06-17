@@ -1,2 +1,2 @@
-export class Dough{}
-export class ThinCrushtDough extends Dough{}
+export interface Dough{}
+export class ThinCrushtDough implements Dough{}

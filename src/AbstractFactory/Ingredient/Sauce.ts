@@ -1,2 +1,2 @@
-export class Sauce{}
-export class MarinaraSauce extends Sauce{}
+export interface Sauce{}
+export class MarinaraSauce implements Sauce{}
